@@ -4,7 +4,7 @@ resource "aws_subnet" "pub_sub_1" {
   map_public_ip_on_launch = var.map_public_ip_on_launch
   vpc_id                  = aws_vpc.dnv_vpc.id
   tags = {
-    Name                              = var.name
+    Name                              = "${var.name}-pub-sub-1"
     Createby                          = var.createby
     Maintainer                        = var.maintainer
     "kubernetes.io/cluster/ed-eks-01" = var.k8s_cluster_ed_eks_01
@@ -18,7 +18,7 @@ resource "aws_subnet" "pub_sub_2" {
   vpc_id                  = aws_vpc.dnv_vpc.id
   map_public_ip_on_launch = var.map_public_ip_on_launch
   tags = {
-    Name                              = var.name
+    Name                              = "${var.name}-pub-sub-2"
     Createby                          = var.createby
     Maintainer                        = var.maintainer
     "kubernetes.io/cluster/ed-eks-01" = var.k8s_cluster_ed_eks_01
